@@ -1,8 +1,3 @@
 import 'owl.carousel';
-import carousel from './carousel';
-import scripts from './scripts';
-
-(() => {
-	carousel();
-	scripts();
-})();
+import './carousel';
+import './scripts';
