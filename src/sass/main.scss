@@ -1,0 +1,64 @@
+body {
+  background-color: #8A99D3;
+  background: #e2e2e2 linear-gradient(to bottom, #58c2ba36 0%, #E2E2E2 100%) no-repeat;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+}
+
+#wrapper {
+  width: 1280px;
+  margin: 0 auto;
+  box-shadow: 0 2px 20px 0 rgba(0,0,0,0.15);
+  overflow: hidden;
+}
+
+section.mainContent {
+  background: #fff;
+  float: left;
+  min-height: 485px;
+  padding: 0;
+  position: relative;
+  overflow-x: hidden;
+  width: 100%;
+
+  &.projeto-mundo-da-luna {
+    @import 'base/base';
+    @import 'pages/header';
+  }
+}
+
+@media only screen and (max-width: 1279px) {
+  #wrapper {
+    width: 1024px;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  #wrapper {
+    width: 768px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  #wrapper {
+    width: 640px;
+  }
+}
+
+@media only screen and (max-width: 639px) {
+  #wrapper {
+    width: 480px;
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  #wrapper {
+    width: 100%;
+    min-width: 320px;
+  }
+}

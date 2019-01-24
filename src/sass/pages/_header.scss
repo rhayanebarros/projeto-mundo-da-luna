@@ -1,0 +1,63 @@
+.align-content {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.bg-header {
+	background-color: #58C2BA;
+	height: 70px;
+    width: 100%;
+    position: absolute;
+}
+
+.bg-cloud-header {
+    background-image: url(../assets/img/nuvemtopo.png);
+    background-repeat: repeat-x;
+    background-position: 0 40px;
+    height: 100%;
+    width: 100%;
+}
+
+.bar {
+    padding: 0 20px;
+    position: relative;
+}
+
+.text-welcome {
+    text-align: justify;
+	font-size: 16px;
+    padding-top: 15px;
+    color: rgba(255, 255, 255, 0.68);
+}
+
+.text-welcome a {
+    text-decoration: underline;
+    font-style: italic;
+    color: inherit;
+}
+
+.text-welcome a:hover {
+    text-decoration: none;
+}
+
+.icons {
+	right: 40px;
+    top: 15px;
+    position: absolute;
+}
+
+.icons li {
+    display: inline-block;
+    vertical-align: -webkit-baseline-middle;
+	list-style: none;
+}
+
+.icons li a img {
+    width: 20px;    
+}
+
+.icons li{
+    +li {
+        margin-left: 10px;
+    }
+}

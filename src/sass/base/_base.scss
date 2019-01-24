@@ -1,0 +1,32 @@
+#main {
+    width: 100%;
+    min-height: 100%;
+}
+
+.container {
+    width: 100%;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    padding: 0 20px;
+}
+.container:before,
+.container:after {
+    display: table;
+    content: "";
+    line-height: 0;
+}
+.container:after {
+    clear: both;
+}
+
+.content {
+    width: 100%;
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+  @import 'resets';

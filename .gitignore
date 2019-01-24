@@ -1,0 +1,5 @@
+app/assets/css/
+app/assets/fonts/
+
+node_modules
+dist/
