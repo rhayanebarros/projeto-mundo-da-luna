@@ -5,59 +5,269 @@
 
 .bg-header {
 	background-color: #58C2BA;
-	height: 70px;
+	height: 80px;
     width: 100%;
     position: absolute;
 }
 
 .bg-cloud-header {
-    background-image: url(../assets/img/nuvemtopo.png);
+    background-image: url(../img/nuvemtopo.png);
     background-repeat: repeat-x;
-    background-position: 0 40px;
+    background-position: 0 50px;
     height: 100%;
     width: 100%;
 }
 
-.bar {
-    padding: 0 20px;
+.social-share {
+    padding: 20px 40px;
     position: relative;
 }
 
-.text-welcome {
-    text-align: justify;
-	font-size: 16px;
-    padding-top: 15px;
-    color: rgba(255, 255, 255, 0.68);
-}
-
-.text-welcome a {
-    text-decoration: underline;
-    font-style: italic;
-    color: inherit;
-}
-
-.text-welcome a:hover {
-    text-decoration: none;
-}
-
 .icons {
-	right: 40px;
-    top: 15px;
-    position: absolute;
+    display: inline-block;
+    vertical-align: top;
 }
 
 .icons li {
-    display: inline-block;
-    vertical-align: -webkit-baseline-middle;
-	list-style: none;
+    display: inline-block;    
 }
 
-.icons li a img {
-    width: 20px;    
+.face,
+.insta,
+.email {
+    width: 20px;
+}
+
+.face {
+    height: 20px;
+}
+
+.insta {
+    height: 18px;
+}
+
+.email {
+    padding-top: 4px;
+    height: 20px;
 }
 
 .icons li{
+    padding-right: 5px;
+}
+
+.img-login {
+    width: 20px;
+    height: 20px;
+    margin-right: 3px;
+}
+
+.text-login {
+    display: inline-block;
+    font-size: 16px;
+    color: #333333;
+    font-family: 'Roboto Slab', sans-serif;
+}
+
+.text-login:hover {
+    text-decoration: underline;
+}
+
+.header-logo {
+    text-align: center;
+}
+
+.logo {
+    margin: -30px 0 0 0;
+    position: relative;
+    width: 400px;
+}
+
+.search {
+    position: absolute;
+    right: 0;
+    margin: -50px 40px 0 0;
+}
+
+.search-cart {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.cart {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.search-input {
+    height: 25px;
+    padding: 5px;
+}
+
+.menu {
+    display: block;
+    margin-bottom: 25px;
+}
+
+.menu h1 {
+    display: none;
+}
+
+.bar {
+    width: 100%;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.bar li {
+    display: inline-block;
+    width: 20%;
+    background-color: #000;
+    color: #fff;
+    padding: 10px 21px;
+    border-radius: 3px;
+    text-align: center;
+}
+
+.bar li:hover {
+    background-color: #676363;
+}
+
+.bar li {
     +li {
-        margin-left: 10px;
+        margin-left: 32px;
+    }
+}
+
+.bar li a {
+    color: #fff;
+    font-family: 'Roboto Slab', sans-serif;
+    font-size: 14px;
+}
+
+.bar li a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 1023px) {
+    .logo {
+        width: 300px;
+    }
+    
+	.bar li {
+		width: 20%;
+	}
+
+	.bar li + li {
+		margin-left: 20px;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.social-share {
+        padding: 20px 20px;
+    }
+
+    .icons li{
+            padding-right: 2px;
+    }
+
+    .face {
+        margin-right: -2px;
+    }
+
+    .search {
+        margin: -40px 20px 0 0;
+    }
+
+    .cart {
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+    }
+
+    .search-input {
+        height: 20px;
+        padding: 3px;
+        width: 140px;
+    }
+
+    .logo {
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 639px) {
+
+    .logo {
+        margin: 20px 0 0 0;
+    }
+
+    nav.menu {
+	    display: block;
+        text-align: center;
+        padding: 20px;
+	}
+
+    .menu h1 {
+	    display: block;
+	    text-transform: uppercase;
+	    background-color: #000;
+	    color: white;
+		padding: 10px 21px;
+		position: relative;
+		border-radius: 3px;
+    }
+    
+    .menu h1:hover {
+        background-color: #676363;
+    }
+
+    .menu li:hover {
+        background-color: #676363;
+    }
+
+	.menu h1.active + .bar {
+	    opacity: 1;
+    	height: 155px;
+	}
+
+	.menu .bar {
+	    width: 100%;
+	    height: 0;
+	    opacity: 0;
+	    margin-top: 4px;
+	    transition: all .2s linear;
+	}
+
+	.menu li {
+	    width: 100%;
+	    box-sizing: border-box;
+
+	}
+
+	.menu li + li {
+		margin-left: 0;
+		margin-top: 5px;
+	}
+
+}
+
+@media screen and (max-width: 375px) {
+    .social-share {
+        padding: 20px 10px;
+    }
+
+    .search {
+        margin: -40px 10px 0 0;
+    }
+
+    .search-input {
+        width: 120px;
+    }
+
+    .cart {
+        margin-right: 0;
     }
 }

@@ -27,13 +27,26 @@ const config = {
                 loader: 'babel-loader',
             },
             {
-                test: /\.(jpe?g|png|gif|svg)$/i,
+                test: /\.(jpe?g|png|gif|ico)$/i,
                 loaders: [{
                     loader: 'file-loader',
                     options: {
-                        name: 'assets/img/[name].[ext]'
+                        name: 'img/[name].[ext]'
                     },
                 }],
+            },
+            {
+                test: /\.svg$/,
+                use: [
+                  {
+                    loader: 'file-loader',
+                    options: {
+                      name: '[name].[ext]',
+                      outputPath: 'svg/',
+                    },
+                  },
+                ],
+                exclude: [/\.\/(font(s)?)\//, /[\\/]node_modules[\\/]/],
             },
             {
                 test: /\.(ttf|eot|woff|woff2)$/,
