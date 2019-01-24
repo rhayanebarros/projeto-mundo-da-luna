@@ -8,7 +8,7 @@ const CleanWebpackPlugin = require("clean-webpack-plugin");
 const config = {
     mode:'none',
     entry: {
-        // polyfills: 'babel-polyfill',
+        polyfills: 'babel-polyfill',
         vendors: './src/sass/vendors.scss',
         main: [
             './src/js/main.js',
@@ -84,6 +84,11 @@ const config = {
         clientLogLevel: 'none',
     },
     plugins: [
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery',
+            'window.jQuery': 'jquery',
+        }),
         new webpack.ProgressPlugin(),
         new HtmlWebpackPlugin({
             template: './src/index.html',
