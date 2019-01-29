@@ -1,14 +1,20 @@
 $('.owl-carousel').owlCarousel({
-    loop: true,
     nav: true,
-    items: 1,
-    margin: 10,
-    autoHeight: true,
-    autoWidth: true,
-    responsiveClass: true,
-    1024: {
-        margin: 0,
-        slideBy: 1,
-        loop: false,
-      },
+    dots: false,
+    loop: false,
+    rewind: true,
+    stagePadding: 0,
+    margin: 5,
+    checkVisibility: true,
+    navElement: 'div',
+    responsive: {
+        0 : {
+            items: 1,
+            slideBy: 1
+        },
+          768 : {
+            items: 1,
+            slideBy: 1
+        },
+    }
 });

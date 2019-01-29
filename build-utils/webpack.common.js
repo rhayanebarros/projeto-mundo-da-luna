@@ -34,6 +34,7 @@ const config = {
                         name: 'img/[name].[ext]'
                     },
                 }],
+                exclude: [/\/(font(s)?)\//],
             },
             {
                 test: /\.svg$/,

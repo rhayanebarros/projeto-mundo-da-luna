@@ -8,12 +8,7 @@ module.exports = {
             {
                 test: /\.(sa|sc|c)ss$/,
                 use: [
-                    {
-                      loader: MiniCssExtractPlugin.loader,
-                      options: {
-                        publicPath: '../',
-                      },
-                    },
+                    'style-loader',
                     'css-loader',
                     'postcss-loader',
                     'sass-loader',
