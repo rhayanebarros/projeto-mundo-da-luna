@@ -8,8 +8,8 @@ const CleanWebpackPlugin = require("clean-webpack-plugin");
 const config = {
     mode:'none',
     entry: {
-        polyfills: 'babel-polyfill',
-        vendors: './src/sass/vendors.scss',
+        polyfills: ['babel-polyfill'],
+        vendors: ['./src/sass/vendors.scss'],
         main: [
             './src/js/main.js',
             './src/sass/main.scss',
@@ -24,7 +24,9 @@ const config = {
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
-                loader: 'babel-loader',
+                use: {
+                    loader: 'babel-loader',
+                },                
             },
             {
                 test: /\.(jpe?g|png|gif|ico)$/i,
@@ -67,7 +69,7 @@ const config = {
                     {
                       loader: 'html-loader',
                       options: {
-                        attrs: [':poster', ':href', ':src'],
+                        attrs: [':poster', ':href', ':src', ':data-content'],
                         interpolate: true,
                       },
                     },
