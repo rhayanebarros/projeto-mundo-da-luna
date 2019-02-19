@@ -25,7 +25,7 @@
 
 .icons {
     display: inline-block;
-    vertical-align: top;
+    vertical-align: middle;
 }
 
 .icons li {
@@ -36,19 +36,7 @@
 .insta,
 .email {
     width: 20px;
-}
-
-.face {
-    height: 20px;
-}
-
-.insta {
     height: 18px;
-}
-
-.email {
-    padding-top: 4px;
-    height: 20px;
 }
 
 .icons li{
@@ -63,6 +51,7 @@
 
 .text-login {
     display: inline-block;
+    vertical-align: bottom;
     font-size: 16px;
     color: #333333;
     font-family: 'Roboto Slab', sans-serif;
